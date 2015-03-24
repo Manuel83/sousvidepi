@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<style>
+</style>
+
+
+<script src="static/js/jquery-2.1.3.min.js"></script>
+<script src="static/js/jquery.flot.min.js"></script>
+<script src="static/js/jquery.flot.time.min.js"></script>
+
+<script src="static/js/app.js"></script>
+
+<body>
+
+    <h2>Sous Vide Pi</h2>
+
+    <div id="control">
+        <table>
+
+            <tr>
+                <td>Target Temperature
+                </td>
+                <td>
+                    <input type="text" id="tt" value="{{ targetTemp }}">
+                </td>
+            </tr>
+
+            <tr>
+                <td>PID Tuning
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Kp
+                </td>
+                <td>
+                    <input type="text" id="kp" value="{{kp}}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Ki
+                </td>
+                <td>
+                    <input type="text" id="ki" value="{{ki}}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Kd
+                </td>
+                <td>
+                    <input type="text" id="kd" value="{{kd}}">
+                </td>
+            </tr>
+        </table>
+        <input type="button" id="setdata" value="Set Data" />
+        <input type="button" id="auto" value="Auto Mode {{automode}}" />
+        <input type="button" value="Heat {{heatmode}}" />
+    </div>
+
+    <div id="ricecooker">
+
+
+        <div id="bucket">
+            <div id="water"><span id="tmpvalue">0</span>&deg;C</div>
+            <div id="temp_chart"></div>
+        </div>
+        <div id="heat_label">Heat <span id="heat_value"></span> %
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+
+
+
+</html>
